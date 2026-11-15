@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #faf6f0;
+    color: #3a2327;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+.editorial-grid-bg {
+  background-color: #3a2327;
+  background-image:
+    linear-gradient(to right, rgba(250, 246, 240, 0.11) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(250, 246, 240, 0.11) 1px, transparent 1px);
+  background-size: 44px 28px;
+}
+
+.editorial-card {
+  background-color: #faf6f0;
+  border: 1.5px solid #3a2327;
+  border-radius: 1rem;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(16px, -8px, 0) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-toast-in {
+  animation: toastSlideIn 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
